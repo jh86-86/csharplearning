@@ -28,6 +28,23 @@ namespace Catalog.Repositories
                 //where is from system.linq. It looks like it loops through the list.With single or default will return the item that matched id and not collection.default will be null
             }
         }
+
+        public void CreateItem(Item item)
+        {
+            items.Add(item); 
+        }
+
+        public void UpdateItem(Item item)
+        {
+            var index = items.FindIndex(existingItem => existingItem.Id == item.Id);  //finds id of existing item and matches it to item
+            items[index]= item; 
+        }
+
+        public void DeleteItem(Guid id)
+        {
+            var index= items.FindIndex(existingItem => existingItem.Id == id);
+            items.RemoveAt(index);
+        }
     }
 }
 
