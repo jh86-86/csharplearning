@@ -5,13 +5,15 @@ using Catalog.Entities;
 
 namespace Catalog.Repositories
 {
-    public class InMemItemsRespository
+    
+
+    public class InMemItemsRespository : IItemsRespository //implements user repo depency inversion
     {
-        private readonly List<Item> items = new()  
+        private readonly List<Item> items = new()
         {
-            new Item {Id = Guid.NewGuid(), Name="Potion", Price= 9, CreateDate = DateTimeOffset.UtcNow}, //DateTimeOffSet= find the date right now
-            new Item {Id = Guid.NewGuid(), Name="Sword", Price= 20, CreateDate = DateTimeOffset.UtcNow},  //DateTimeOffSet= find the date right now
-            new Item {Id = Guid.NewGuid(), Name="Bronze Shield", Price= 18, CreateDate = DateTimeOffset.UtcNow},  //DateTimeOffSet= find the date right now
+            new Item { Id = Guid.NewGuid(), Name = "Potion", Price = 9, CreateDate = DateTimeOffset.UtcNow }, //DateTimeOffSet= find the date right now
+            new Item { Id = Guid.NewGuid(), Name = "Sword", Price = 20, CreateDate = DateTimeOffset.UtcNow },  //DateTimeOffSet= find the date right now
+            new Item { Id = Guid.NewGuid(), Name = "Bronze Shield", Price = 18, CreateDate = DateTimeOffset.UtcNow },  //DateTimeOffSet= find the date right now
         };
 
         public IEnumerable<Item> GetItems()
@@ -19,11 +21,12 @@ namespace Catalog.Repositories
             return items;
         }
 
-        public Item GetItem(Guid id) {
+        public Item GetItem(Guid id)
         {
-            return items.Where(items => items.Id == id).SingleOrDefault();
-            //where is from system.linq. It looks like it loops through the list.With single or default will return the item that matched id and not collection.default will be null
-        }
+            {
+                return items.Where(items => items.Id == id).SingleOrDefault();
+                //where is from system.linq. It looks like it loops through the list.With single or default will return the item that matched id and not collection.default will be null
+            }
         }
     }
 }

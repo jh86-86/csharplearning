@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Catalog.Repositories;
 using System.Collections.Generic;
 using Catalog.Entities;
-
+using System.Linq;
+using Catalog.Dtos;
 
 namespace Catalog.Controllers
 {
@@ -11,24 +12,24 @@ namespace Catalog.Controllers
     [Route("items")] //defines http route or [controller]
     public class ItemContoller: ControllerBase
     {
-        private readonly InMemItemsRespository repository; //not ideal
+        private readonly IItemsRespository repository; // using dependency inversion with interface and dependcy injection
 
-        public ItemContoller()
+        public ItemContoller(IItemsRespository respository)
         {
-            repository = new InMemItemsRespository();
+            this.repository = respository;
         }
 
 
         [HttpGet]
-        public IEnumerable<Item> GetItems()
+        public IEnumerable<ItemDto> GetItems() //itemsDto is setting up that contract
         {
-            var items = repository.GetItems();
+            var items = repository.GetItems().Select( item => item.AsDto()); //use the extension method and brings item back
             return items;
         }
 
         [HttpGet("{id}")]
         
-            public ActionResult<Item> GetItem(Guid id)   //actionresult allows us to return more than one type
+            public ActionResult<ItemDto> GetItem(Guid id)   //actionresult allows us to return more than one type
             {
                     var item= repository.GetItem(id);
 
@@ -36,7 +37,7 @@ namespace Catalog.Controllers
                     {
                         return NotFound(); 
                     }
-                    return Ok(item); //return item in an okay status code
+                    return Ok(item.AsDto()); //return item in an okay status code
             }
             
         }
