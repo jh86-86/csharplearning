@@ -47,7 +47,9 @@ namespace catalog
 
              //registers our dependency   
             services.AddSingleton<IItemsRespository, MongoDbItemsRepository>();  //havig one instance of a type accross entire instance of our service
-            services.AddControllers();
+            services.AddControllers(options => {
+                options.SuppressAsyncSuffixInActionNames =false; // dotnet will not remove the async suffixs at runtime
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "catalog", Version = "v1" });

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Catalog.Entities;
 
 namespace Catalog.Repositories
@@ -16,34 +17,39 @@ namespace Catalog.Repositories
             new Item { Id = Guid.NewGuid(), Name = "Bronze Shield", Price = 18, CreateDate = DateTimeOffset.UtcNow },  //DateTimeOffSet= find the date right now
         };
 
-        public IEnumerable<Item> GetItems()
-        {
-            return items;
+        public async Task<IEnumerable<Item>> GetItemsAsync()
+        {   //FromResult create a  task that has already completed and introduce the value of items collection into task
+            return await Task.FromResult(items);
         }
 
-        public Item GetItem(Guid id)
+        public async Task<Item> GetItemAsync(Guid id)
         {
             {
-                return items.Where(items => items.Id == id).SingleOrDefault();
+                var item= items.Where(items => items.Id == id).SingleOrDefault();
                 //where is from system.linq. It looks like it loops through the list.With single or default will return the item that matched id and not collection.default will be null
+                return await Task.FromResult(item);
             }
         }
 
-        public void CreateItem(Item item)
+        public async Task CreateItemAsync(Item item)
         {
             items.Add(item); 
+            await Task.CompletedTask;
+            //above means create a task which has completed and return task
         }
 
-        public void UpdateItem(Item item)
+        public async Task UpdateItemAsync(Item item)
         {
             var index = items.FindIndex(existingItem => existingItem.Id == item.Id);  //finds id of existing item and matches it to item
             items[index]= item; 
+            await Task.CompletedTask;
         }
 
-        public void DeleteItem(Guid id)
+        public async Task DeleteItemAsync(Guid id)
         {
             var index= items.FindIndex(existingItem => existingItem.Id == id);
             items.RemoveAt(index);
+            await Task.CompletedTask;
         }
     }
 }
