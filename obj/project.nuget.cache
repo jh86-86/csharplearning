@@ -1,15 +1,25 @@
 {
   "version": 2,
-  "dgSpecHash": "Ks07CT1mA0EzzkOJZ5hN8kE/gL5eVKRPJXR6OOl26pKSbUTTU9nJSxtZ1jvDHFanSI34XUA4pZRrf7k7y5s0LQ==",
+  "dgSpecHash": "ZODooNZgRuQN0ZLfQxQARTMZS8+Ai1Ft4hxYMRkQ9uIPSM9N+xlMl7gRtiu9SW3Mf1POc9L4GXFOrvKhw1NP1Q==",
   "success": true,
   "projectFilePath": "/Users/johnjameshodgins/Documents/FULLCSHARP/catalog/catalog.csproj",
   "expectedPackageFiles": [
+    "/Users/johnjameshodgins/.nuget/packages/dnsclient/1.4.0/dnsclient.1.4.0.nupkg.sha512",
     "/Users/johnjameshodgins/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/johnjameshodgins/.nuget/packages/microsoft.netcore.platforms/2.1.2/microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "/Users/johnjameshodgins/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/johnjameshodgins/.nuget/packages/mongodb.bson/2.12.3/mongodb.bson.2.12.3.nupkg.sha512",
+    "/Users/johnjameshodgins/.nuget/packages/mongodb.driver/2.12.3/mongodb.driver.2.12.3.nupkg.sha512",
+    "/Users/johnjameshodgins/.nuget/packages/mongodb.driver.core/2.12.3/mongodb.driver.core.2.12.3.nupkg.sha512",
+    "/Users/johnjameshodgins/.nuget/packages/mongodb.libmongocrypt/1.2.1/mongodb.libmongocrypt.1.2.1.nupkg.sha512",
+    "/Users/johnjameshodgins/.nuget/packages/sharpcompress/0.23.0/sharpcompress.0.23.0.nupkg.sha512",
     "/Users/johnjameshodgins/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "/Users/johnjameshodgins/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "/Users/johnjameshodgins/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "/Users/johnjameshodgins/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+    "/Users/johnjameshodgins/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+    "/Users/johnjameshodgins/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
+    "/Users/johnjameshodgins/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "/Users/johnjameshodgins/.nuget/packages/system.text.encoding.codepages/4.5.1/system.text.encoding.codepages.4.5.1.nupkg.sha512"
   ],
   "logs": []
 }

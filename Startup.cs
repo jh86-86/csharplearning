@@ -12,6 +12,11 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Catalog.Repositories;
+using MongoDB.Driver;
+using Catalog.Settings;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Serializers;
+using MongoDB.Bson;
 
 namespace catalog
 {
@@ -27,8 +32,21 @@ namespace catalog
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) //register all service im using acrross application
         {
+
+
+//anytime it sees a guid,it should,serialise them as string in the databse
+            BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
+            BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
+
+//this connects to mongodb repository
+            services.AddSingleton<IMongoClient>(serviceProvider => 
+            {
+                var settings = Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
+                return new MongoClient(settings.ConnectionString);
+            });
+
              //registers our dependency   
-            services.AddSingleton<IItemsRespository, InMemItemsRespository>();  //havig one instance of a type accross entire instance of our service
+            services.AddSingleton<IItemsRespository, MongoDbItemsRepository>();  //havig one instance of a type accross entire instance of our service
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
