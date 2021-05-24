@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0UQXwv5ikHaKQki5kfc2oESc5+RsD3DWIc2/JD1fmB8l1RjKFJRqCMqZ++sdDD+Uucc0INImCj9WfCiTTfOXFQ==",
+  "dgSpecHash": "cVAMFLcb4XdJSTXOm78hlLrlAk+Pp5pRzYwUvyBvdqgKV0FcjFU0VQQisVYk1xugD3gQgbMNUbRPW1h9gMilmA==",
   "success": true,
-  "projectFilePath": "/Users/johnjameshodgins/Documents/FULLCSHARP/catalog/catalog.csproj",
+  "projectFilePath": "/Users/johnjameshodgins/Documents/FULLCSHARP/Catalog/Catalog.csproj",
   "expectedPackageFiles": [
     "/Users/johnjameshodgins/.nuget/packages/aspnetcore.healthchecks.mongodb/5.0.1/aspnetcore.healthchecks.mongodb.5.0.1.nupkg.sha512",
     "/Users/johnjameshodgins/.nuget/packages/dnsclient/1.4.0/dnsclient.1.4.0.nupkg.sha512",

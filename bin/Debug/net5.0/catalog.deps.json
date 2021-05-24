@@ -23,7 +23,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "catalog/1.0.0": {
+      "Catalog/1.0.0": {
         "dependencies": {
           "AspNetCore.HealthChecks.MongoDb": "5.0.1",
           "MongoDB.Driver": "2.12.3",
@@ -311,10 +311,10 @@
           "WindowsBase": "4.0.0.0"
         },
         "runtime": {
-          "catalog.dll": {}
+          "Catalog.dll": {}
         },
         "compile": {
-          "catalog.dll": {}
+          "Catalog.dll": {}
         }
       },
       "AspNetCore.HealthChecks.MongoDb/5.0.1": {
@@ -2261,7 +2261,7 @@
     }
   },
   "libraries": {
-    "catalog/1.0.0": {
+    "Catalog/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/johnjameshodgins/Documents/FULLCSHARP/catalog/catalog.csproj": {}
+    "/Users/johnjameshodgins/Documents/FULLCSHARP/Catalog/Catalog.csproj": {}
   },
   "projects": {
-    "/Users/johnjameshodgins/Documents/FULLCSHARP/catalog/catalog.csproj": {
+    "/Users/johnjameshodgins/Documents/FULLCSHARP/Catalog/Catalog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/johnjameshodgins/Documents/FULLCSHARP/catalog/catalog.csproj",
-        "projectName": "catalog",
-        "projectPath": "/Users/johnjameshodgins/Documents/FULLCSHARP/catalog/catalog.csproj",
+        "projectUniqueName": "/Users/johnjameshodgins/Documents/FULLCSHARP/Catalog/Catalog.csproj",
+        "projectName": "Catalog",
+        "projectPath": "/Users/johnjameshodgins/Documents/FULLCSHARP/Catalog/Catalog.csproj",
         "packagesPath": "/Users/johnjameshodgins/.nuget/packages/",
-        "outputPath": "/Users/johnjameshodgins/Documents/FULLCSHARP/catalog/obj/",
+        "outputPath": "/Users/johnjameshodgins/Documents/FULLCSHARP/Catalog/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/johnjameshodgins/.nuget/NuGet/NuGet.Config"
